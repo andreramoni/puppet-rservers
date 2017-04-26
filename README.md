@@ -6,8 +6,8 @@ Puppet module to use as an example on courses and talks about puppet
 1. [Overview](#Overview)
 2. [Setup](#Setup)
 3. [Servers](#Servers)
-    * [NTP](#ntp)
-    * [DNS](#dns)
+    * [NTP](#NTP)
+    * [DNS_Resolver](#DNS_Resolver)
 
 ## Overview
 This module is designed to be used in presentations and courses to present
@@ -27,4 +27,4 @@ git clone https://github.com/andreramoni/puppet-rservers rservers
 
 ### NTP
 
-### DNS
+### DNS_Resolver
