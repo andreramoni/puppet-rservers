@@ -8,6 +8,7 @@ Puppet module to use as an example on courses and talks about puppet
 3. [Servers](#Servers)
     * [NTP](#NTP)
     * [DNS_Resolver](#DNS_Resolver)
+    * [LB_HAproxy](#LB_HAproxy)
 
 ## Overview
 This module is designed to be used in presentations and courses to present
@@ -28,3 +29,5 @@ git clone https://github.com/andreramoni/puppet-rservers rservers
 ### NTP
 
 ### DNS_Resolver
+
+### LB_HAproxy
