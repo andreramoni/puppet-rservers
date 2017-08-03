@@ -1,0 +1,3 @@
+class rservers::loadbalance::haproxy {
+}
+
