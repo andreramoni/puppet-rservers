@@ -6,14 +6,14 @@ class rservers::loadbalance::keepalived (
   include ::keepalived
 
   ::keepalived::vrrp::instance { $vr_rid_prod:
-    interface         => ${facts['networking']['primary']},
+    interface         => "${facts['networking']['primary']}",
     state             => 'BACKUP',
     virtual_router_id => $vr_rid_prod,
     priority          => '100',
     auth_type         => 'PASS',
     auth_pass         => 'secretpass',
     virtual_ipaddress => $vips,
-    track_interface   => ${facts['networking']['primary']},
+    track_interface   => "${facts['networking']['primary']}",
     track_script      => [ 'check_haproxy' ],
   }
 
