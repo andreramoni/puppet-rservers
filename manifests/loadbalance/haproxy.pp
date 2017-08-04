@@ -1,6 +1,6 @@
 class rservers::loadbalance::haproxy (
 
-) inherits rservers::loadbalance::haproxy_params {
+) inherits rservers::loadbalance::params {
     notify { 'teste\n': }
 }
 

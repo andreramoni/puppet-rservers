@@ -1,4 +1,4 @@
 class rservers::loadbalance::loadbalance {
-  include rservers::loadbalance::haproxy
+  include rservers::loadbalance::keepalived
 
 }
