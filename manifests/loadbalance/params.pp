@@ -1,4 +1,4 @@
-class rservers::loadbalance::haproxy_params {
+class rservers::loadbalance::params {
 
 }
 
