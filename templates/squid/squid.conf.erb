@@ -78,6 +78,6 @@ cache_dir ufs /var/spool/squid 20000 16 256
 
 acl KEPEK urlpath_regex .
 cache allow KEPEK
-refresh_pattern . 5259487 100% 9259487 ignore-no-cache ignore-private override-lastmod override-expire ignore-no-store ignore-must-revalidate store-stale
-offline_mode on
+#refresh_pattern . 5259487 100% 9259487 ignore-no-cache ignore-private override-lastmod override-expire ignore-no-store ignore-must-revalidate store-stale
+#offline_mode on
 #append_domain .<%= @domain %>
