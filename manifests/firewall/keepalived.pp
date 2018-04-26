@@ -6,14 +6,14 @@ class rservers::firewall::keepalived (
   include ::keepalived
 
   ::keepalived::vrrp::instance { $vr_id:
-    interface         => $facts['networking']['primary'],
+    interface         => $::iface_ext,
     state             => 'BACKUP',
     virtual_router_id => $vr_id,
     priority          => '100',
     auth_type         => 'PASS',
     auth_pass         => 'secretpass',
     virtual_ipaddress => $vips,
-    track_interface   => $facts['networking']['primary'],
+    track_interface   => $::iface_ext,
     #track_script      => [ 'check_haproxy' ],
   }
 
