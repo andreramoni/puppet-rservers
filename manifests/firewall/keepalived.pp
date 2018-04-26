@@ -1,6 +1,7 @@
 class rservers::firewall::keepalived (
   $vips   = $::rservers::firewall::params::vips,
-  $vr_id  = $::rservers::firewall::params::vr_id,
+  $vr_id_ext  = $::rservers::firewall::params::vr_id_ext,
+  $vr_id_mgmt  = $::rservers::firewall::params::vr_id_mgmt,
 ) inherits rservers::firewall::params {
 
   include ::keepalived
@@ -8,7 +9,7 @@ class rservers::firewall::keepalived (
   ::keepalived::vrrp::instance { $vr_id:
     interface         => $::iface_ext,
     state             => 'BACKUP',
-    virtual_router_id => $vr_id,
+    virtual_router_id => $vr_id_ext,
     priority          => '100',
     auth_type         => 'PASS',
     auth_pass         => 'secretpass',
@@ -20,7 +21,7 @@ class rservers::firewall::keepalived (
   ::keepalived::vrrp::instance { $vr_id:
     interface         => $::iface_mgmt,
     state             => 'BACKUP',
-    virtual_router_id => $vr_id,
+    virtual_router_id => $vr_id_mgmt,
     priority          => '100',
     auth_type         => 'PASS',
     auth_pass         => 'secretpass',
