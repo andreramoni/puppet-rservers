@@ -5,6 +5,7 @@ class rservers::firewall::params {
     $vr_id = '100'
     $vips = [
              { ip => '192.168.12.20/24', label => "${::iface_ext}:0" },
+             { ip => '10.255.0.250/16', label => "${::iface_mgmt}:0" },
             ]
   }
 }
