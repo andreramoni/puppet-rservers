@@ -6,7 +6,7 @@ class rservers::firewall::keepalived (
 
   include ::keepalived
 
-  ::keepalived::vrrp::instance { $vr_id:
+  ::keepalived::vrrp::instance { $vr_id_ext:
     interface         => $::iface_ext,
     state             => 'BACKUP',
     virtual_router_id => $vr_id_ext,
@@ -18,7 +18,7 @@ class rservers::firewall::keepalived (
     #track_script      => [ 'check_haproxy' ],
   }
   
-  ::keepalived::vrrp::instance { $vr_id:
+  ::keepalived::vrrp::instance { $vr_id_mgmt:
     interface         => $::iface_mgmt,
     state             => 'BACKUP',
     virtual_router_id => $vr_id_mgmt,
