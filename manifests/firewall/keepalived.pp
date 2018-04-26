@@ -4,6 +4,10 @@ class rservers::firewall::keepalived (
   $vr_id_mgmt  = $::rservers::firewall::params::vr_id_mgmt,
 ) inherits rservers::firewall::params {
 
+
+# This is the kind of class that I prefer tu use package/file/server 
+# instead of and external module.
+
   include ::keepalived
 
   ::keepalived::vrrp::instance { $vr_id_ext:
@@ -15,18 +19,6 @@ class rservers::firewall::keepalived (
     auth_pass         => 'secretpass',
     virtual_ipaddress => $vips_ext,
     track_interface   => $::iface_ext,
-    #track_script      => [ 'check_haproxy' ],
-  }
-  
-  ::keepalived::vrrp::instance { $vr_id_mgmt:
-    interface         => $::iface_mgmt,
-    state             => 'BACKUP',
-    virtual_router_id => $vr_id_mgmt,
-    priority          => '100',
-    auth_type         => 'PASS',
-    auth_pass         => 'secretpass',
-    virtual_ipaddress => $vips_mgmt,
-    #track_interface   => $::iface_ext,
     #track_script      => [ 'check_haproxy' ],
   }
   
