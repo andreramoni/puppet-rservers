@@ -29,6 +29,30 @@ class rservers::firewall::keepalived (
     #track_interface   => $::iface_ext,
     #track_script      => [ 'check_haproxy' ],
   }
+  
+  ::keepalived::vrrp::instance { $vr_id_srv:
+    interface         => $::iface_srv,
+    state             => 'BACKUP',
+    virtual_router_id => $vr_id_srv,
+    priority          => '100',
+    auth_type         => 'PASS',
+    auth_pass         => 'secretpass',
+    virtual_ipaddress => $vips_mgmt,
+    #track_interface   => $::iface_srv,
+    #track_script      => [ 'check_haproxy' ],
+  }
+  
+  ::keepalived::vrrp::instance { $vr_id_dmz1:
+    interface         => $::iface_dmz1,
+    state             => 'BACKUP',
+    virtual_router_id => $vr_id_dmz1,
+    priority          => '100',
+    auth_type         => 'PASS',
+    auth_pass         => 'secretpass',
+    virtual_ipaddress => $vips_dmz1,
+    #track_interface   => $::iface_dmz1,
+    #track_script      => [ 'check_haproxy' ],
+  }
 
   ::keepalived::vrrp::script { 'check_haproxy':
     script   => '/usr/bin/killall -0 haproxy',
