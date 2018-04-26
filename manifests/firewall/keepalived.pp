@@ -12,8 +12,20 @@ class rservers::firewall::keepalived (
     priority          => '100',
     auth_type         => 'PASS',
     auth_pass         => 'secretpass',
-    virtual_ipaddress => $vips,
+    virtual_ipaddress => $vips_ext,
     track_interface   => $::iface_ext,
+    #track_script      => [ 'check_haproxy' ],
+  }
+  
+  ::keepalived::vrrp::instance { $vr_id:
+    interface         => $::iface_mgmt,
+    state             => 'BACKUP',
+    virtual_router_id => $vr_id,
+    priority          => '100',
+    auth_type         => 'PASS',
+    auth_pass         => 'secretpass',
+    virtual_ipaddress => $vips_mgmt,
+    #track_interface   => $::iface_ext,
     #track_script      => [ 'check_haproxy' ],
   }
 
