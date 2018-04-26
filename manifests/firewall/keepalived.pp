@@ -29,7 +29,7 @@ class rservers::firewall::keepalived (
     priority          => '100',
     auth_type         => 'PASS',
     auth_pass         => 'secretpass',
-    virtual_ipaddress => $vips_mgmt,
+    virtual_ipaddress => $vips_srv,
     #track_interface   => $::iface_srv,
     #track_script      => [ 'check_haproxy' ],
   }
