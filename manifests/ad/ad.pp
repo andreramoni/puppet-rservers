@@ -1,3 +1,3 @@
-class rservers::ad {
+class rservers::ad::ad {
   
 }
