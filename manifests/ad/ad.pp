@@ -1,5 +1,5 @@
 class rservers::ad::ad {
-  windowsfeature { 'Active\ Directory\ Domain\ Services':
+  windowsfeature { 'ad-domain-services':
     ensure => 'present',
 #    installmanagementtools => true,
   }  
