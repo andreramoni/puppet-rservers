@@ -1,5 +1,5 @@
 class rservers::firewall::sysctl {
-  rbaselines::sysctl { 'firewall':
+  rbaselines::linux::sysctl { 'firewall':
     sysctl_options => [
             'set net.ipv4.ip_forward 1',
             'set net.ipv4.ip_nonlocal_bind 1',
