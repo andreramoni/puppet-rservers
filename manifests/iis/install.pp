@@ -8,11 +8,4 @@ class rservers::iis::install {
   windowsfeature { $iis_features:
     ensure => 'present',
     installmanagementtools => true,
-  } 
-  iis::manage_site { 'Default Web Site':
-    ensure => absent,
-    site_path => 'any',
-    app_pool => 'DefaultAppPool',
-  }
-
 }
