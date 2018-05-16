@@ -1,4 +1,4 @@
-class rservers::windows::iis {
+class rservers::iis::install {
 
   $iis_features = [ 'Web-WebServer',
                     'Web-Scripting-Tools',
@@ -9,10 +9,10 @@ class rservers::windows::iis {
     ensure => 'present',
     installmanagementtools => true,
   } 
-#  iis::manage_site { 'Default Web Site':
-#    ensure => absent,
-#    site_path => 'any',
-#    app_pool => 'DefaultAppPool',
-#  }
+  iis::manage_site { 'Default Web Site':
+    ensure => absent,
+    site_path => 'any',
+    app_pool => 'DefaultAppPool',
+  }
 
 }
