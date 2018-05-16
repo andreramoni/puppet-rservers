@@ -1,4 +1,4 @@
-class rservers::windows::install {
+class rservers::dotnet::install {
   $dotnet_features = [ 'Net-Framework-45-Features',
                        'Net-Framework-45-Core', 
                        'Net-Framework-45-ASPNET',]
