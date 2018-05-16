@@ -8,4 +8,5 @@ class rservers::iis::install {
   windowsfeature { $iis_features:
     ensure => 'present',
     installmanagementtools => true,
+  }
 }
