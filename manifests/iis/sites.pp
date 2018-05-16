@@ -4,14 +4,14 @@ class rservers::iis::sites {
     ensure => 'absent',
   }
 
-  iis_site { 'minimal':
+  iis_site { 'myapp':
     ensure          => 'started',
     physicalpath    => 'c:\\inetpub\\minimal',
     applicationpool => 'DefaultAppPool',
-    require         => File['minimal'],
+    require         => [ File['myapp'], Iis_site['Default Web Site'] ]
   }
-  file { 'minimal':
+  file { 'myapp':
     ensure => 'directory',
-    path   => 'c:\\inetpub\\minimal',
+    path   => 'c:\\inetpub\\myapp',
   }
 }
