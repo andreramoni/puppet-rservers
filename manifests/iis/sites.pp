@@ -6,7 +6,7 @@ class rservers::iis::sites {
 
   iis_site { 'myapp':
     ensure          => 'started',
-    physicalpath    => 'c:\\inetpub\\minimal',
+    physicalpath    => 'c:\\inetpub\\myapp',
     applicationpool => 'DefaultAppPool',
     require         => [ File['myapp'], Iis_site['Default Web Site'] ]
   }
