@@ -1,0 +1,25 @@
+$TTL 60;
+@ IN SOA nsmaster.ext.lab admin.ext.lab. (
+       0349 ; serial 
+       3600 ; refresh
+       1800 ; 
+       604800 ; 
+       3600 ) ; neg TTL
+@    IN NS nsmaster.ext.lab.
+nsmaster 	IN A 	192.168.12.2
+pawin		IN A	192.168.12.5
+proxy		IN A	192.168.12.9
+fw		IN A	192.168.12.10
+fw01		IN A	192.168.12.11
+fw02		IN A	192.168.12.12
+esx01		IN A 	192.168.12.21
+vcenter		IN A	192.168.12.30
+vrealize	IN A	192.168.12.31
+vdp		IN A	192.168.12.32
+foreman		IN A	192.168.12.50
+manageiq	IN A	192.168.12.51
+katello		IN A	192.168.12.52
+freeipa		IN A	192.168.12.100
+
+
+

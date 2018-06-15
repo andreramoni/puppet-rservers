@@ -1,0 +1,15 @@
+$TTL 60;
+@ IN SOA 12.168.192.in-addr.arpa admin.ext.lab. (
+       0351 ; serial 
+       3600 ; refresh
+       1800 ; 
+       604800 ; 
+       3600 ) ; neg TTL
+@    IN NS nsmaster.ext.lab.
+52 IN	PTR katello.ext.lab.
+32 IN	PTR vdp.ext.lab.
+30 IN	PTR vcenter.ext.lab.
+31 IN	PTR vrealize.ext.lab.
+
+
+
