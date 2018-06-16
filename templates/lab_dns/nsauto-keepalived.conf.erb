@@ -23,6 +23,9 @@ vrrp_instance 100 {
   track_interface {
     ens224
   }
+  track_script {
+    check_named
+  }
 
   virtual_ipaddress {
     192.168.12.2/24 dev ens224 label ens224:0
