@@ -1,0 +1,32 @@
+# Managed by Puppet
+vrrp_script check_named {
+  script    "/usr/bin/killall -0 named"
+  interval  1
+  weight    2
+  fall      3
+  rise      3
+}
+
+vrrp_instance 100 {
+  interface                 ens224
+  state                     BACKUP
+  virtual_router_id         100
+  priority                  100
+  advert_int                1
+  garp_master_delay         5
+  
+  authentication {
+    auth_type PASS
+    auth_pass secretpass
+  }
+
+  track_interface {
+    ens224
+  }
+
+  virtual_ipaddress {
+    192.168.12.2/24 dev ens224 label ens224:0
+  }
+}
+
+
