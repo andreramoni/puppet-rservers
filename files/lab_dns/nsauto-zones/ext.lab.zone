@@ -1,6 +1,6 @@
 $TTL 60;
 @ IN SOA ns.ext.lab admin.ext.lab. (
-       0350 ; serial 
+       0351 ; serial 
        3600 ; refresh
        1800 ; 
        604800 ; 
@@ -23,6 +23,6 @@ vdp		IN A	192.168.12.32
 foreman		IN A	192.168.12.50
 manageiq	IN A	192.168.12.51
 katello		IN A	192.168.12.52
-freeipa		IN A	192.168.12.100
+freeipa		IN A	192.168.12.60
 
 
