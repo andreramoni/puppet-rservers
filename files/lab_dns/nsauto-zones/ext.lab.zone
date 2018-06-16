@@ -1,11 +1,11 @@
 $TTL 60;
-@ IN SOA nsmaster.ext.lab admin.ext.lab. (
+@ IN SOA ns.ext.lab admin.ext.lab. (
        0350 ; serial 
        3600 ; refresh
        1800 ; 
        604800 ; 
        3600 ) ; neg TTL
-@    IN NS nsmaster.ext.lab.
+@    IN NS ns.ext.lab.
 nsmaster 	IN CNAME ns
 ns	 	IN A 	192.168.12.2
 ns1		IN A	192.168.12.3
