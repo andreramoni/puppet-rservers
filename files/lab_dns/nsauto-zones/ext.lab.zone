@@ -1,6 +1,6 @@
 $TTL 60;
 @ IN SOA ns.ext.lab admin.ext.lab. (
-       0351 ; serial 
+       0352 ; serial 
        3600 ; refresh
        1800 ; 
        604800 ; 
@@ -12,6 +12,7 @@ ns1		IN A	192.168.12.3
 ns2		IN A	192.168.12.4
 pawin		IN A	192.168.12.5
 palin		IN A	192.168.12.6
+storage		IN A	192.168.12.8
 proxy		IN A	192.168.12.9
 fw		IN A	192.168.12.10
 fw01		IN A	192.168.12.11
