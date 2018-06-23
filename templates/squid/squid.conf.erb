@@ -73,8 +73,8 @@ refresh_pattern ^gopher:	1440	0%	1440
 refresh_pattern -i (/cgi-bin/|\?) 0	0%	0
 refresh_pattern .		0	20%	4320
 
-maximum_object_size 500 MB
-cache_dir ufs /var/spool/squid 4000 16 256
+maximum_object_size 1024 MB
+cache_dir ufs /var/spool/squid 6000 16 256
 
 acl KEPEK urlpath_regex .
 cache allow KEPEK
