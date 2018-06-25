@@ -1,6 +1,6 @@
 $TTL 60;
 @ IN SOA ns.ext.lab admin.ext.lab. (
-       0353 ; serial 
+       0354 ; serial 
        3600 ; refresh
        1800 ; 
        604800 ; 
@@ -17,6 +17,8 @@ proxy		IN A	192.168.12.9
 fw		IN A	192.168.12.10
 fw01		IN A	192.168.12.11
 fw02		IN A	192.168.12.12
+monitor		IN A	192.168.12.13
+olhomagico	IN CNAME monitor
 esx01		IN A 	192.168.12.21
 vcenter		IN A	192.168.12.30
 vrealize	IN A	192.168.12.31
