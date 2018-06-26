@@ -31,6 +31,7 @@ class rservers::testing {
 
   class {'icingaweb2':
     manage_repo   => false,
+    manage_package => false,
     import_schema => true,
     db_type       => 'mysql',
     db_host       => 'localhost',
