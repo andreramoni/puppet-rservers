@@ -72,7 +72,19 @@ class rservers::testing {
 
 
 
-
+  class {'icingaweb2::module::director':
+    git_revision  => 'v1.3.2',
+    db_host       => 'localhost',
+    db_name       => 'director',
+    db_username   => 'director',
+    db_password   => 'director',
+    import_schema => true,
+    kickstart     => true,
+    endpoint      => $::fqdn,
+    api_username  => 'root',
+    api_password  => 'icinga',
+    require       => Mysql::Db['director']
+  }
 
 
 
