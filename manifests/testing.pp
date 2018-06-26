@@ -21,10 +21,6 @@ class rservers::testing {
   }  
 
 
-  class { '::icingaweb2':
-    manage_repo => false,
-  }
-
 
   mysql::db { 'icingaweb2':
     user     => 'icingaweb2',
@@ -34,7 +30,7 @@ class rservers::testing {
   }
 
   class {'icingaweb2':
-    manage_repo   => true,
+    manage_repo   => false,
     import_schema => true,
     db_type       => 'mysql',
     db_host       => 'localhost',
