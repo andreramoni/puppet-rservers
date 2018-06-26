@@ -69,7 +69,12 @@ class rservers::testing {
   }
   
 
-
+  mysql::db { 'director':
+    user     => 'director',
+    password => 'director',
+    host     => 'localhost',
+    grant    => ['SELECT', 'INSERT', 'UPDATE', 'DELETE', 'DROP', 'CREATE VIEW', 'CREATE', 'INDEX', 'EXECUTE', 'ALTER', 'REFERENCES'],
+  }
 
 
   class {'icingaweb2::module::director':
