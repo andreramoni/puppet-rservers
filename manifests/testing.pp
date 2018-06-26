@@ -19,5 +19,36 @@ class rservers::testing {
     import_schema => true,
     require       => Mysql::Db['icinga2'],
   }  
+
+
+
+
+
+  mysql::db { 'icingaweb2':
+    user     => 'icingaweb2',
+    password => 'icingaweb2',
+    host     => 'localhost',
+    grant    => ['SELECT', 'INSERT', 'UPDATE', 'DELETE', 'DROP', 'CREATE VIEW', 'CREATE', 'INDEX', 'EXECUTE', 'ALTER', 'REFERENCES'],
+  }
+
+  class {'icingaweb2':
+    manage_repo   => true,
+    import_schema => true,
+    db_type       => 'mysql',
+    db_host       => 'localhost',
+    db_port       => 3306,
+    db_username   => 'icingaweb2',
+    db_password   => 'icingaweb2',
+    require       => Mysql::Db['icingaweb2'],
+  }
+
+
+
+
+
+
+
+
+
 }
 
