@@ -21,7 +21,9 @@ class rservers::testing {
   }  
 
 
-
+  class { '::icingaweb2':
+    manage_repo => false,
+  }
 
 
   mysql::db { 'icingaweb2':
