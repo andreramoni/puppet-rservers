@@ -41,7 +41,15 @@ class rservers::testing {
   }
 
 
-
+  icingaweb2::config::resource{'my-sql':
+    type        => 'db',
+    db_type     => 'mysql',
+    host        => 'localhost',
+    port        => '3306',
+    db_name     => 'icingaweb2',
+    db_username => 'icingaweb2',
+    db_password => 'icingaweb2',
+  }
 
 
 
