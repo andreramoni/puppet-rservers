@@ -1,5 +1,5 @@
 class rservers::jblin::packages {
-  package { 'bind':
+  package { 'KDE Plasma Workspaces':
     ensure => present,
   }
 }
