@@ -1,5 +1,5 @@
 class rservers::jblin::packages {
-  package { 'KDE Plasma Workspaces':
+  yum::group { 'KDE Plasma Workspaces':
     ensure => present,
   }
 }
