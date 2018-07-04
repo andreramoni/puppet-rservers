@@ -1,5 +1,5 @@
 class rservers::jblin::packages {
-  yum::group { 'KDE Plasma Workspaces':
+  yum::group { 'Cinnamon Desktop':
     ensure => present,
     timeout => 1800,
   }
