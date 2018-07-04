@@ -1,5 +1,5 @@
 class rservers::jblin::packages {
-  yum::group { 'Cinnamon Desktop':
+  yum::group { 'MATE Desktop':
     ensure => present,
     timeout => 1800,
   }
