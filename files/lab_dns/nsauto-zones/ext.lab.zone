@@ -21,6 +21,7 @@ fw01		IN A	192.168.12.11
 fw02		IN A	192.168.12.12
 monitor		IN A	192.168.12.13
 olhomagico	IN CNAME monitor
+backup		IN A	192.168.12.14
 esx01		IN A 	192.168.12.21
 esx02		IN A 	192.168.12.22
 vcenter		IN A	192.168.12.30
