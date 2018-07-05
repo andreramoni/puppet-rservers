@@ -6,6 +6,7 @@ xrandr --addmode Virtual1 "1920x1080_60.00"'
     ensure => file,
     owner => 'admin',
     mode => '0600',
-    content => $fcontent
+    content => $fcontent,
+    require => User['admin'],
   } 
 }
