@@ -3,4 +3,7 @@ class rservers::jblin::packages {
     ensure => present,
     timeout => 1800,
   }
+  package { 'git':
+    ensure => installed,
+  }
 }
