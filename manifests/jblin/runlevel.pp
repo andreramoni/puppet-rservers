@@ -3,6 +3,10 @@ class rservers::jblin::runlevel {
     ensure => link,
     target => '/lib/systemd/system/graphical.target',
     notify => Exec[reboot],
+    require => [
+      Yum::Group['KDE Plasma Workspaces'],
+      User['admin'],
+    ],
   }
   exec { 'reboot':
     command     => '/usr/sbin/reboot',
