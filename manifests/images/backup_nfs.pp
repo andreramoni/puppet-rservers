@@ -1,7 +1,7 @@
 class rservers::images::backup_nfs {
   mount { '/backup':
     ensure  => 'mounted',
-    device  => 'backup.ext.lab:/data',
+    device  => 'backup.ext.lab:/data/images',
     dump    => '0',
     fstype  => 'nfs4',
     options => 'defaults',
