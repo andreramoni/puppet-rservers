@@ -1,4 +1,4 @@
-class rservers::lab_nfs::nfs_server {
+class rservers::nfs_server::nfs_server {
   service { 'nfs':
     ensure => running,
     enable => true,
