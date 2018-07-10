@@ -1,5 +1,5 @@
 class rservers::jbwin::openssh {
-  package { 'openssh':
+  package { 'mls-software-openssh':
     ensure => installed,
   }
 }
