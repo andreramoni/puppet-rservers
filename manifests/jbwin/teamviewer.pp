@@ -1,4 +1,4 @@
-class rservers::pawin::teamviewer {
+class rservers::jbwin::teamviewer {
   package { 'teamviewer':
     ensure => installed,
   }

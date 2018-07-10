@@ -1,4 +1,4 @@
-class rservers::pawin::openssh {
+class rservers::jbwin::openssh {
   package { 'openssh':
     ensure => installed,
   }

@@ -1,4 +1,4 @@
-class rservers::pawin::putty {
+class rservers::jbwin::putty {
   package { 'putty':
     ensure => installed,
   }
