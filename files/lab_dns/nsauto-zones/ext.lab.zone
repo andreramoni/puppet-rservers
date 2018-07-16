@@ -1,6 +1,6 @@
 $TTL 60;
 @ IN SOA ns.ext.lab admin.ext.lab. (
-       0358 ; serial 
+       0359 ; serial 
        3600 ; refresh
        1800 ; 
        604800 ; 
@@ -23,6 +23,8 @@ fw02		IN A	192.168.12.12
 monitor		IN A	192.168.12.13
 olhomagico	IN CNAME monitor
 backup		IN A	192.168.12.14
+storage01	IN A	192.168.12.15
+storage02	IN A	192.168.12.16
 esx01		IN A 	192.168.12.21
 esx02		IN A 	192.168.12.22
 vcenter		IN A	192.168.12.30
