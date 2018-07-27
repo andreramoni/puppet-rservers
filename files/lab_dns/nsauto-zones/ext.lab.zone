@@ -1,6 +1,6 @@
 $TTL 60;
 @ IN SOA ns.ext.lab admin.ext.lab. (
-       0359 ; serial 
+       0360 ; serial 
        3600 ; refresh
        1800 ; 
        604800 ; 
@@ -15,6 +15,7 @@ jbwin		IN A	192.168.12.5
 palin		IN CNAME jblin
 jblin		IN A	192.168.12.6
 nfs01		IN A	192.168.12.8
+esx01nfs	IN A	192.168.12.8
 proxy		IN A	192.168.12.9
 fw		IN A	192.168.12.10
 fw01		IN A	192.168.12.11
