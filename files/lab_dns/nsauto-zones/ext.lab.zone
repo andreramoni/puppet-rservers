@@ -14,8 +14,7 @@ pawin		IN CNAME jbwin
 jbwin		IN A	192.168.12.5
 palin		IN CNAME jblin
 jblin		IN A	192.168.12.6
-storage		IN CNAME images
-images		IN A	192.168.12.8
+nfs01		IN A	192.168.12.8
 proxy		IN A	192.168.12.9
 fw		IN A	192.168.12.10
 fw01		IN A	192.168.12.11
@@ -23,6 +22,7 @@ fw02		IN A	192.168.12.12
 monitor		IN A	192.168.12.13
 olhomagico	IN CNAME monitor
 backup		IN A	192.168.12.14
+dlink01		IN CNAME storage01
 storage01	IN A	192.168.12.15
 storage02	IN A	192.168.12.16
 esx01		IN A 	192.168.12.21
