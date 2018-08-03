@@ -3,6 +3,6 @@ class rservers::app01srv::site {
     ensure          => 'started',
     physicalpath    => 'c:\\inetpub\\app01',
     applicationpool => 'DefaultAppPool',
-    require         => [ File['app01'], Iis_site['Default Web Site'] ]
+    require         => Iis_site['Default Web Site'],
   }
 }
