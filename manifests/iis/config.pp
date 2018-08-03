@@ -1,3 +1,0 @@
-class rservers::iis::config {
-
-}
