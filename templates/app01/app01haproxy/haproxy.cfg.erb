@@ -69,7 +69,7 @@ frontend  main *:80
 #---------------------------------------------------------------------
 backend app01
     balance     roundrobin
-<% @nodes.each do |node| %>
+<% @nodes.each do |node| -%>
     server <%= node['certname'] %> <%= node['ip'] %>:80
 <% end %>
 
