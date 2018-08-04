@@ -6,7 +6,8 @@ class rservers::app01haproxy::config {
 		  filter_result => [ 'certname', 'ip' ] ,
   })
 
-  $nodes = $query['results']
+  #$nodes = $query['results']
+  $nodes = $query
 
   file { '/etc/haproxy/haproxy.cfg':
     ensure  => file,
