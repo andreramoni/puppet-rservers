@@ -73,7 +73,7 @@ backend app01
 
 
 <% @nodes.each do |node| %>
-  # server <%= node %>:80
+  # server <%= node['ip'] %>:80
 <% end %>
 
 
