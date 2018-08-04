@@ -72,5 +72,8 @@ backend app01
     server  app01srv01 192.168.12.100:80
 
 
-<%= @nodes %>
+<% @nodes.each do |node| %>
+  # server <%= node.certname %> <%= node.ip %>:80
+<% end %>
+
 
