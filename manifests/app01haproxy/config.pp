@@ -3,8 +3,7 @@ class rservers::app01haproxy::config {
                   foreman_pass => 'readonly',
                   item         => 'hosts',
                   search       => 'hostgroup_fullname ~ Windows/App01',
-                  per_page      => 1000,
-		  filter_result => [ 'ip' ] ,
+		  #filter_result => [ 'ip' ] ,
   })
 
   $nodes = $query['results']
