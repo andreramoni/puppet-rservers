@@ -69,11 +69,8 @@ frontend  main *:80
 #---------------------------------------------------------------------
 backend app01
     balance     roundrobin
-    server  app01srv01 192.168.12.100:80
-
-
 <% @nodes.each do |node| %>
-  # server <%= node['ip'] %>:80
+    server <%= node['certname'] %> <%= node['ip'] %>:80
 <% end %>
 
 
