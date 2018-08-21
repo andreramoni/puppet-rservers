@@ -34,6 +34,7 @@ vdp		IN A	192.168.12.32
 foreman		IN A	192.168.12.50
 manageiq	IN A	192.168.12.51
 katello		IN A	192.168.12.52
+foreman-nightly	IN A	192.168.12.53
 freeipa		IN A	192.168.12.60
 openstack       IN A	192.168.12.70
 
