@@ -36,7 +36,7 @@ http {
     include /etc/nginx/conf.d/*.conf;
     upstream app01srv {
     <% @nodes.each do |node| -%>
-      server <%= node['ip'] %>; 
+      server <%= node['ip'] %> max_fails=2 fail_timeout=3s; 
     <% end %>
     }
     server {
