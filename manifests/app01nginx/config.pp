@@ -2,7 +2,7 @@ class rservers::app01nginx::config {
   $query = foreman({foreman_user => 'readonly',
                   foreman_pass => 'readonly',
                   item         => 'hosts',
-                  search       => 'hostgroup_fullname ~ Windows/App01',
+                  search       => 'hostgroup_fullname ~ DevTeam01/DevTeam01_App01srv',
 		  filter_result => [ 'ip' ] ,
   })
 
