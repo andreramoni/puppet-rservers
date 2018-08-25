@@ -13,5 +13,6 @@ class rservers::app01nginx::config {
     ensure  => file,
     content => template('rservers/app01/app01nginx/nginx.conf.erb'),
     require => Package['nginx'],
+    notify  => Service['nginx'],
   }
 }
