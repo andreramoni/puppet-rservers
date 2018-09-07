@@ -1,0 +1,41 @@
+$TTL 60;
+@ IN SOA ns.ext.dc1.lab admin.ext.dc1.lab. (
+       0360 ; serial 
+       3600 ; refresh
+       1800 ; 
+       604800 ; 
+       3600 ) ; neg TTL
+@    IN NS ns.ext.lab.
+nsmaster 	IN CNAME ns
+ns	 	IN A 	192.168.12.2
+ns1		IN A	192.168.12.3
+ns2		IN A	192.168.12.4
+pawin		IN CNAME jbwin
+jbwin		IN A	192.168.12.5
+palin		IN CNAME jblin
+jblin		IN A	192.168.12.6
+nfs01		IN A	192.168.12.8
+esx01nfs	IN A	192.168.12.8
+proxy		IN A	192.168.12.9
+fw		IN A	192.168.12.10
+fw01		IN A	192.168.12.11
+fw02		IN A	192.168.12.12
+monitor		IN A	192.168.12.13
+olhomagico	IN CNAME monitor
+backup		IN A	192.168.12.14
+dlink01		IN CNAME storage01
+storage01	IN A	192.168.12.15
+storage02	IN A	192.168.12.16
+esx01		IN A 	192.168.12.21
+esx02		IN A 	192.168.12.22
+vcenter		IN A	192.168.12.30
+vrealize	IN A	192.168.12.31
+vdp		IN A	192.168.12.32
+foreman		IN A	192.168.12.50
+manageiq	IN A	192.168.12.51
+katello		IN A	192.168.12.52
+foreman-nightly	IN A	192.168.12.53
+freeipa		IN A	192.168.12.60
+openstack       IN A	192.168.12.70
+
+
