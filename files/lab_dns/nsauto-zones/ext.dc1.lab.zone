@@ -1,6 +1,6 @@
 $TTL 60;
 @ IN SOA ns.ext.dc1.lab admin.ext.dc1.lab. (
-       0361 ; serial 
+       0363 ; serial 
        3600 ; refresh
        1800 ; 
        604800 ; 
@@ -13,6 +13,7 @@ ns2		IN A	192.168.12.4
 nfs01		IN A	192.168.12.8
 esx01nfs	IN A	192.168.12.8
 proxy		IN A	192.168.12.5
+teste		IN A	192.168.12.6
 dlink01		IN CNAME storage01
 storage01	IN A	192.168.12.15
 esx01		IN A 	192.168.12.21
