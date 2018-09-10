@@ -5,7 +5,7 @@ $TTL 60;
        1800 ; 
        604800 ; 
        3600 ) ; neg TTL
-@    IN NS ns.ext.lab.
+@    IN NS ns.ext.dc1.lab.
 nsmaster 	IN CNAME ns
 ns	 	IN A 	192.168.12.2
 ns1		IN A	192.168.12.3
