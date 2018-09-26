@@ -1,0 +1,20 @@
+$TTL 60;
+@ IN SOA ns.ext.dc1.lab admin.ext.dc1.lab. (
+       0363 ; serial 
+       3600 ; refresh
+       1800 ; 
+       604800 ; 
+       3600 ) ; neg TTL
+@    IN NS ns.ext.dc1.lab.
+nsmaster 	IN CNAME ns
+ns	 	IN A 	192.168.12.2
+ns1		IN A	192.168.12.3
+ns2		IN A	192.168.12.4
+proxy		IN A	192.168.12.5
+dlink01		IN CNAME storage01
+storage01	IN A	192.168.12.15
+esx01		IN A 	192.168.12.21
+vcenter		IN A	192.168.12.20
+foreman		IN A	192.168.12.30
+
+
