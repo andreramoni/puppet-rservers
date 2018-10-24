@@ -28,7 +28,7 @@ vrrp_instance 100 {
   }
 
   virtual_ipaddress {
-    192.168.12.2/24 dev <%= @networking.primary %> label <%= @networking['primary'] %>:0
+    192.168.12.2/24 dev <%= @networking['primary'] %> label <%= @networking['primary'] %>:0
   }
 }
 
