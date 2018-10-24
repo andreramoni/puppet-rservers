@@ -10,5 +10,6 @@ class rservers::dns::keepalived {
   file { '/etc/keepalived/keepalived.conf':
     content => template('rservers/dns/keepalived.conf.erb'),
     notify  => Service[keepalived],
+    require => Package[keepalived],
   }
 }
