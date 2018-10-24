@@ -1,10 +1,10 @@
-class rservers::lab_dns::nsauto_zones {
+class rservers::dns::zones {
   file { '/var/named/zones':
     ensure  => directory,
     recurse => true,
     owner   => 'named',
     group   => 'named',
-    source  => 'puppet:///modules/rservers/lab_dns/nsauto-zones',
+    source  => 'puppet:///modules/rservers/dns/zones',
     require => Package[bind],
     notify  => Service[named],
   }

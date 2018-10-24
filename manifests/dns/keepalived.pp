@@ -1,4 +1,4 @@
-class rservers::lab_dns::nsauto_keepalived {
+class rservers::dns::keepalived {
   package { 'keepalived':
     ensure => present,
   }
@@ -8,7 +8,7 @@ class rservers::lab_dns::nsauto_keepalived {
     require => Package[keepalived],
   }
   file { '/etc/keepalived/keepalived.conf':
-    content => template('rservers/lab_dns/nsauto-keepalived.conf.erb'),
+    content => template('rservers/dns/keepalived.conf.erb'),
     notify  => Service[keepalived],
   }
 }

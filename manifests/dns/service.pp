@@ -1,4 +1,4 @@
-class rservers::lab_dns::named_service {
+class rservers::dns::service {
   service { 'named':
     ensure => running,
     enable => true,

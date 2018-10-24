@@ -8,7 +8,7 @@ vrrp_script check_named {
 }
 
 vrrp_instance 100 {
-  interface                 ens224
+  interface                 <%= @networking.primary %>
   state                     BACKUP
   virtual_router_id         100
   priority                  100
@@ -21,14 +21,14 @@ vrrp_instance 100 {
   }
 
   track_interface {
-    ens224
+    <%= @networking.primary %>
   }
   track_script {
     check_named
   }
 
   virtual_ipaddress {
-    192.168.12.2/24 dev ens224 label ens224:0
+    192.168.12.2/24 dev <%= @networking.primary %> label <%= @networking.primary %>:0
   }
 }
 

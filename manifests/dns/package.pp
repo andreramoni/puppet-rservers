@@ -1,4 +1,4 @@
-class rservers::lab_dns::bind_package {
+class rservers::dns::package {
   package { 'bind':
     ensure => present,
   }
