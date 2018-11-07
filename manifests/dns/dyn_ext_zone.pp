@@ -6,7 +6,7 @@ class rservers::dns::dyn_ext_zone {
 #                  filter_result => [ 'ip' ] ,
   })
   
-  notify {"Foi ${::nodes}": }
+#  notify {"Foi ${::nodes}": }
 
 
   file { '/var/named/zones/ext.dc1.lab.zone.dyn':
