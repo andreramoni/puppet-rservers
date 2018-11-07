@@ -3,10 +3,11 @@ class rservers::dns::dyn_ext_zone {
   $nodes = foreman({foreman_user => 'readonly',
                   foreman_pass => 'readonly',
                   item         => 'hosts',
-#                  filter_result => [ 'ip' ] ,
+                  search       => 'hostgroup_fullname ~ Infra/DNS_Auto',
+                  filter_result => [ 'ip' ] ,
   })
   
-#  notify {"Foi ${::nodes}": }
+  notify {"Foi ${::nodes}": }
 
 
   file { '/var/named/zones/ext.dc1.lab.zone.dyn':
