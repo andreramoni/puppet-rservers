@@ -15,6 +15,5 @@ class rservers::dns::dyn_ext_zone {
     content => template('rservers/dns/ext.dc1.lab.zone.dyn.erb'),
     owner   => 'named',
     group   => 'named',
-    notify  => Service[named],
   }
 }
