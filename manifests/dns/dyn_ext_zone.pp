@@ -1,7 +1,7 @@
 class rservers::dns::dyn_ext_zone {
 
   $query = foreman({foreman_user => 'readonly',
-                  foreman_pass => 'readonly',
+                  freman_pass => 'readonly',
                   item         => 'hosts',
                   filter_result => [ 'ip' ] ,
   })
