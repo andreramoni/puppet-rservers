@@ -5,7 +5,7 @@ class rservers::dns::zones {
     owner   => 'named',
     group   => 'named',
     source  => 'puppet:///modules/rservers/dns/zones',
-    require => Package[bind],
+    require => [ Package[bind], Class['rservers::dns::zones'], ],
     notify  => Service[named],
   }
 }

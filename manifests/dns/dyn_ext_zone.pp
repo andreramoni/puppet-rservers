@@ -4,7 +4,6 @@ class rservers::dns::dyn_ext_zone {
     content => template('templates/dns/ext.dc1.lab.zone.dyn.erb'),
     owner   => 'named',
     group   => 'named',
-    require => Class['rservers::dns::zones'],
     notify  => Service[named],
   }
 }
