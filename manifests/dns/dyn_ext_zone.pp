@@ -1,11 +1,12 @@
 class rservers::dns::dyn_ext_zone {
 
   $query = foreman({foreman_user => 'readonly',
-                  freman_pass => 'readonly',
+                  foreman_pass => 'readonly',
                   item         => 'hosts',
                   filter_result => [ 'ip' ] ,
   })
-
+  
+  notify {"Foi": }
   $nodes = $query
 
 
