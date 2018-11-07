@@ -6,7 +6,9 @@ class rservers::dns::dyn_ext_zone {
                   search       => 'hostgroup_fullname ~ Infra/DNS_Auto',
                   filter_result => [ 'ipaddress' ] ,
   })
-  $nodes = $query
+
+  $nodes = $query['results']
+  #$nodes = $query
   notify {"Foi ${::nodes}": }
 
 
