@@ -4,11 +4,10 @@ class rservers::dns::dyn_ext_zone {
                   foreman_pass => 'readonly',
                   item         => 'hosts',
                   search       => 'hostgroup_fullname ~ Infra/DNS_Auto',
-                  filter_result => [ 'ipaddress' ] ,
+                  filter_result => [ 'certname', 'ip' ] ,
   })
 
-  $nodes = $query['results']
-  #$nodes = $query
+  $nodes = $query
   notify {"Foi ${::nodes}": }
 
 
