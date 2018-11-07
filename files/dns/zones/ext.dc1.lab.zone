@@ -15,6 +15,6 @@ esx01		IN A 	192.168.12.21
 vcenter		IN A	192.168.12.20
 foreman		IN A	192.168.12.30
 
-$INCLUDE ext.dc1.lab.zone.dyn
+//$INCLUDE ext.dc1.lab.zone.dyn
 
 
