@@ -5,6 +5,7 @@ class rservers::dns::dyn_ext_zone {
                   item         => 'hosts',
                   search       => 'domain = ext.dc1.lab and organization = RLabs',
                   filter_result => [ 'name', 'ip' ] ,
+                  per_page      => 1000,
   })
 
   #$nodes = $query['results']
