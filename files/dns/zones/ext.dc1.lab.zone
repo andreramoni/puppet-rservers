@@ -8,7 +8,9 @@ $TTL 60;
 @    IN NS ns.ext.dc1.lab.
 nsmaster 	IN CNAME ns
 ns	 	IN A 	192.168.12.2
-proxy		IN A	192.168.12.5
+;ns1	 	IN A 	192.168.12.3
+;ns2	 	IN A 	192.168.12.4
+;proxy		IN A	192.168.12.5
 dlink01		IN CNAME storage01
 storage01	IN A	192.168.12.15
 esx01		IN A 	192.168.12.21
