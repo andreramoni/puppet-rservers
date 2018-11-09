@@ -3,7 +3,7 @@ class rservers::dns::dyn_ext_zone {
   $query = foreman({foreman_user => 'admin',
                   foreman_pass => 'adminadmin',
                   item         => 'hosts',
-                  search       => 'hostgroup_fullname ~ Infra/DNS_Auto',
+                  search       => 'domain = ext.dc1.lab and organization = RLabs',
                   filter_result => [ 'name', 'ip' ] ,
   })
 
