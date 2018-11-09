@@ -1,4 +1,4 @@
 <% @nodes.each do |node| -%>
-  <%= node['ip'] %>
+    server <%= node['certname'] %> <%= node['ip'] %>:80 check
 <% end %>
 

@@ -1,14 +1,14 @@
 class rservers::dns::dyn_ext_zone {
 
-  $query = foreman({foreman_user => 'admin',
-                  foreman_pass => 'adminadmin',
+  $query = foreman({foreman_user => 'readonly',
+                  foreman_pass => 'readonly',
                   item         => 'hosts',
                   search       => 'hostgroup_fullname ~ Infra/DNS_Auto',
                   filter_result => [ 'certname', 'ip' ] ,
   })
 
-  $nodes = $query['results']
-
+  #$nodes = $query['results']
+  $nodes = $query
 
   file { '/var/named/zones/ext.dc1.lab.zone.dyn':
     ensure  => file,
