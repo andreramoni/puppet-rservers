@@ -4,7 +4,7 @@ class rservers::dns::dyn_ext_zone {
                   foreman_pass => 'adminadmin',
                   item         => 'hosts',
                   search       => 'hostgroup_fullname ~ Infra/DNS_Auto',
-                  filter_result => [ 'hostname', 'ip' ] ,
+                  filter_result => [ 'name', 'ip' ] ,
   })
 
   #$nodes = $query['results']
